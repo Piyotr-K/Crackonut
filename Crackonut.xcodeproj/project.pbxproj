@@ -13,6 +13,7 @@
 		BA227F0120812AD400FF55D1 /* Crackonut.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA227EFF20812AD400FF55D1 /* Crackonut.xcdatamodeld */; };
 		BA227F0320812AD400FF55D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA227F0220812AD400FF55D1 /* Assets.xcassets */; };
 		BA227F0620812AD400FF55D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA227F0420812AD400FF55D1 /* LaunchScreen.storyboard */; };
+		BA227F0E20812BAA00FF55D1 /* Brown-Coconut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BA227F0D20812BAA00FF55D1 /* Brown-Coconut.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BA227F0220812AD400FF55D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA227F0520812AD400FF55D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA227F0720812AD400FF55D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA227F0D20812BAA00FF55D1 /* Brown-Coconut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Brown-Coconut.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				BA227EFA20812AD400FF55D1 /* ViewController.swift */,
 				BA227EFC20812AD400FF55D1 /* Main.storyboard */,
 				BA227F0220812AD400FF55D1 /* Assets.xcassets */,
+				BA227F0D20812BAA00FF55D1 /* Brown-Coconut.jpg */,
 				BA227F0420812AD400FF55D1 /* LaunchScreen.storyboard */,
 				BA227F0720812AD400FF55D1 /* Info.plist */,
 				BA227EFF20812AD400FF55D1 /* Crackonut.xcdatamodeld */,
@@ -126,6 +129,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA227F0E20812BAA00FF55D1 /* Brown-Coconut.jpg in Resources */,
 				BA227F0620812AD400FF55D1 /* LaunchScreen.storyboard in Resources */,
 				BA227F0320812AD400FF55D1 /* Assets.xcassets in Resources */,
 				BA227EFE20812AD400FF55D1 /* Main.storyboard in Resources */,
