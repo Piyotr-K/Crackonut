@@ -13,8 +13,8 @@ struct Coconut {
     let timeBonus: Double;
     init(level: Int)
     {
-        self.hp = 10 * level
-        self.timeBonus = 1.1 * Double(level)
+        self.hp = (10 + level) * level
+        self.timeBonus = 1.5 * Double(level)
     }
     
     func getHp() -> Int
@@ -67,7 +67,7 @@ class ViewController: UIViewController {
     @IBAction func on_click_coconut(_ sender: UIButton) {
         if (gameRunning)
         {
-            button_coconut.setImage(UIImage(named: "Brown-Coconut.jpg"), for: .normal)
+            button_coconut.setImage(UIImage(named: "Brown-Coconut.png"), for: .normal)
             if (CrackONut?.getHp())! > 1
             {
                 CrackONut?.damage()
@@ -142,7 +142,7 @@ class ViewController: UIViewController {
         addTime(timeAdd: (CrackONut?.getTime())!)
         CrackONut = nil
         CrackONut = Coconut(level: currLevel!)
-        button_coconut.setImage(UIImage(named: "cracked-coconut.png"), for: .normal)
+        button_coconut.setImage(UIImage(named: "cracked.png"), for: .normal)
         label_health.text = "Crack!"
     }
 

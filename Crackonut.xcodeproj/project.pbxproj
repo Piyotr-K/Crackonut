@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7A1BE0C92089D01E00AFA073 /* cracked-coconut.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A1BE0C82089D01E00AFA073 /* cracked-coconut.png */; };
+		7AF6B0AE2089D8F1002A9D69 /* Brown-Coconut.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF6B0AD2089D8F1002A9D69 /* Brown-Coconut.png */; };
+		7AF6B0B02089D8F8002A9D69 /* cracked.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF6B0AF2089D8F8002A9D69 /* cracked.png */; };
 		BA227EF920812AD400FF55D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA227EF820812AD400FF55D1 /* AppDelegate.swift */; };
 		BA227EFB20812AD400FF55D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA227EFA20812AD400FF55D1 /* ViewController.swift */; };
 		BA227EFE20812AD400FF55D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA227EFC20812AD400FF55D1 /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		7A1BE0C82089D01E00AFA073 /* cracked-coconut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cracked-coconut.png"; sourceTree = "<group>"; };
+		7AF6B0AD2089D8F1002A9D69 /* Brown-Coconut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Brown-Coconut.png"; sourceTree = "<group>"; };
+		7AF6B0AF2089D8F8002A9D69 /* cracked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cracked.png; sourceTree = "<group>"; };
 		BA227EF520812AD400FF55D1 /* Crackonut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crackonut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA227EF820812AD400FF55D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA227EFA20812AD400FF55D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,8 +68,10 @@
 				BA227EFA20812AD400FF55D1 /* ViewController.swift */,
 				BA227EFC20812AD400FF55D1 /* Main.storyboard */,
 				BA227F0220812AD400FF55D1 /* Assets.xcassets */,
+				7AF6B0AF2089D8F8002A9D69 /* cracked.png */,
 				BA227F0D20812BAA00FF55D1 /* Brown-Coconut.jpg */,
 				7A1BE0C82089D01E00AFA073 /* cracked-coconut.png */,
+				7AF6B0AD2089D8F1002A9D69 /* Brown-Coconut.png */,
 				BA227F0420812AD400FF55D1 /* LaunchScreen.storyboard */,
 				BA227F0720812AD400FF55D1 /* Info.plist */,
 				BA227EFF20812AD400FF55D1 /* Crackonut.xcdatamodeld */,
@@ -132,6 +138,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AF6B0B02089D8F8002A9D69 /* cracked.png in Resources */,
+				7AF6B0AE2089D8F1002A9D69 /* Brown-Coconut.png in Resources */,
 				BA227F0E20812BAA00FF55D1 /* Brown-Coconut.jpg in Resources */,
 				BA227F0620812AD400FF55D1 /* LaunchScreen.storyboard in Resources */,
 				7A1BE0C92089D01E00AFA073 /* cracked-coconut.png in Resources */,
