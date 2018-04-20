@@ -9,20 +9,35 @@
 import UIKit
 
 struct Coconut {
-    let hp: Int;
+    var hp: Int;
     let timeBonus: Double;
-    init(hp: Int, timeBonus: Double) {
-        self.hp = hp
-        self.timeBonus = timeBonus
+    init(level: Int)
+    {
+        self.hp = 10 * level
+        self.timeBonus = 1.5 * Double(level)
     }
     
+    func getHp() -> Int
+    {
+        return self.hp
+    }
+    
+    func getTime() -> Double
+    {
+        return self.timeBonus
+    }
+    
+    mutating func damage()
+    {
+        self.hp = self.hp - 1
+    }
     
 }
 
 class ViewController: UIViewController {
     final var timeLimit: Double = 20.0
     final var resetClick: Int = 0
-    final var levelStart: Int = 0
+    final var levelStart: Int = 1
     
     var clicks: Int = 0
     var timeLeft: Double = 0.0
@@ -31,6 +46,7 @@ class ViewController: UIViewController {
     var timer: Timer?
     var updater: Timer?
     var currLevel: Int?
+    var CrackONut: Coconut?
     @IBOutlet weak var label_clicks: UILabel!
     @IBOutlet weak var label_timer: UILabel!
     @IBOutlet weak var button_newGame: UIButton!
@@ -49,8 +65,16 @@ class ViewController: UIViewController {
     @IBAction func on_click_coconut(_ sender: UIButton) {
         if (gameRunning)
         {
-            clicks += 1;
-            label_clicks.text = clicks.description + " clicks"
+            if (CrackONut?.getHp())! > 0
+            {
+                CrackONut?.damage()
+            }
+            else
+            {
+                clicks += 1
+                label_clicks.text = clicks.description + " cracked"
+                advanceLevel()
+            }
         }
     }
     
@@ -61,9 +85,10 @@ class ViewController: UIViewController {
             timeLeft = timeLimit
             button_newGame.isEnabled = false
             button_newGame.tintColor = UIColor.gray
-            label_clicks.text = "0 clicks"
+            label_clicks.text = "0 cracked"
             label_timer.textColor = UIColor.blue
             currLevel = levelStart
+            CrackONut = Coconut(level: currLevel!)
             gameRunning = true
             startTimer()
         }
@@ -97,6 +122,21 @@ class ViewController: UIViewController {
         }
     }
     
+    func addTime(timeAdd: Double)
+    {
+        timeLeft += timeAdd
+        timer?.invalidate()
+        timer = nil
+        timer = Timer.scheduledTimer(timeInterval: timeLeft, target: self, selector: #selector(self.endGame), userInfo: nil, repeats: false)
+    }
+    
+    func advanceLevel()
+    {
+        (currLevel)! += 1
+        addTime(timeAdd: (CrackONut?.getTime())!)
+        CrackONut = nil
+        CrackONut = Coconut(level: currLevel!)
+    }
 
 }
 
