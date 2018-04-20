@@ -14,7 +14,7 @@ struct Coconut {
     init(level: Int)
     {
         self.hp = 10 * level
-        self.timeBonus = 1.5 * Double(level)
+        self.timeBonus = 1.1 * Double(level)
     }
     
     func getHp() -> Int
@@ -50,6 +50,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var label_clicks: UILabel!
     @IBOutlet weak var label_timer: UILabel!
     @IBOutlet weak var button_newGame: UIButton!
+    @IBOutlet weak var label_health: UILabel!
+    @IBOutlet weak var button_coconut: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,9 +67,11 @@ class ViewController: UIViewController {
     @IBAction func on_click_coconut(_ sender: UIButton) {
         if (gameRunning)
         {
-            if (CrackONut?.getHp())! > 0
+            button_coconut.setImage(UIImage(named: "Brown-Coconut.jpg"), for: .normal)
+            if (CrackONut?.getHp())! > 1
             {
                 CrackONut?.damage()
+                label_health.text = "HP: " + (CrackONut?.getHp().description)!
             }
             else
             {
@@ -89,6 +93,7 @@ class ViewController: UIViewController {
             label_timer.textColor = UIColor.blue
             currLevel = levelStart
             CrackONut = Coconut(level: currLevel!)
+            label_health.text = "HP: " + (CrackONut?.getHp().description)!
             gameRunning = true
             startTimer()
         }
@@ -104,6 +109,7 @@ class ViewController: UIViewController {
         updater = nil
         button_newGame.isEnabled = true
         button_newGame.tintColor = color_curr
+        CrackONut = nil
         gameRunning = false
     }
     
@@ -136,6 +142,8 @@ class ViewController: UIViewController {
         addTime(timeAdd: (CrackONut?.getTime())!)
         CrackONut = nil
         CrackONut = Coconut(level: currLevel!)
+        button_coconut.setImage(UIImage(named: "cracked-coconut.png"), for: .normal)
+        label_health.text = "Crack!"
     }
 
 }

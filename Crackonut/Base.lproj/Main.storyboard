@@ -41,13 +41,13 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJH-on-Gpb">
-                                <rect key="frame" x="43" y="105" width="289" height="289"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJH-on-Gpb">
+                                <rect key="frame" x="43.5" y="105" width="289" height="289"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="289" id="97l-m5-SOf"/>
                                     <constraint firstAttribute="height" constant="289" id="f4w-dF-Sm9"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="Brown-Coconut"/>
+                                <state key="normal" image="Brown-Coconut.jpg"/>
                                 <connections>
                                     <action selector="on_click_coconut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g28-EQ-Zoi"/>
                                 </connections>
@@ -62,14 +62,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmC-Bc-s45">
+                                <rect key="frame" x="105" y="76" width="165" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.049691020330000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="jmC-Bc-s45" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0mM-xl-zG0"/>
                             <constraint firstItem="eJH-on-Gpb" firstAttribute="top" secondItem="lYE-U1-j15" secondAttribute="bottom" constant="59" id="CGX-kt-J9K"/>
                             <constraint firstItem="qTJ-Ag-Fzn" firstAttribute="top" secondItem="eJH-on-Gpb" secondAttribute="bottom" constant="8" id="R53-Oa-dz8"/>
+                            <constraint firstItem="jmC-Bc-s45" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="105" id="TUI-AV-DJe"/>
                             <constraint firstItem="i6a-0z-L0T" firstAttribute="top" secondItem="qTJ-Ag-Fzn" secondAttribute="bottom" constant="21" id="TXf-HR-ey3"/>
                             <constraint firstItem="i6a-0z-L0T" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Wa8-wL-UVh"/>
                             <constraint firstItem="eJH-on-Gpb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bo0-wR-ida"/>
+                            <constraint firstItem="jmC-Bc-s45" firstAttribute="top" secondItem="lYE-U1-j15" secondAttribute="bottom" constant="30" id="fOr-xa-9kt"/>
+                            <constraint firstItem="eJH-on-Gpb" firstAttribute="top" secondItem="jmC-Bc-s45" secondAttribute="bottom" constant="8" symbolic="YES" id="i8t-tf-SVr"/>
                             <constraint firstItem="lYE-U1-j15" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="j3p-gY-Qf7"/>
                             <constraint firstItem="qTJ-Ag-Fzn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mi2-5c-At6"/>
                             <constraint firstItem="lYE-U1-j15" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="o0C-Qm-zw8"/>
@@ -77,17 +87,19 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="button_coconut" destination="eJH-on-Gpb" id="Rrk-fh-d0f"/>
                         <outlet property="button_newGame" destination="qTJ-Ag-Fzn" id="U7u-fX-goP"/>
                         <outlet property="label_clicks" destination="i6a-0z-L0T" id="6uv-iE-bjh"/>
+                        <outlet property="label_health" destination="jmC-Bc-s45" id="29f-G6-IEf"/>
                         <outlet property="label_timer" destination="lYE-U1-j15" id="IqJ-yv-Bad"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="23.188405797101453" y="30.978260869565219"/>
+            <point key="canvasLocation" x="21.600000000000001" y="30.134932533733135"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Brown-Coconut" width="512" height="512"/>
+        <image name="Brown-Coconut.jpg" width="512" height="512"/>
     </resources>
 </document>
