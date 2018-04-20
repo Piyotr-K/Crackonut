@@ -8,9 +8,21 @@
 
 import UIKit
 
+struct Coconut {
+    let hp: Int;
+    let timeBonus: Double;
+    init(hp: Int, timeBonus: Double) {
+        self.hp = hp
+        self.timeBonus = timeBonus
+    }
+    
+    
+}
+
 class ViewController: UIViewController {
     final var timeLimit: Double = 20.0
     final var resetClick: Int = 0
+    final var levelStart: Int = 0
     
     var clicks: Int = 0
     var timeLeft: Double = 0.0
@@ -18,6 +30,7 @@ class ViewController: UIViewController {
     var color_curr: UIColor?
     var timer: Timer?
     var updater: Timer?
+    var currLevel: Int?
     @IBOutlet weak var label_clicks: UILabel!
     @IBOutlet weak var label_timer: UILabel!
     @IBOutlet weak var button_newGame: UIButton!
@@ -50,6 +63,7 @@ class ViewController: UIViewController {
             button_newGame.tintColor = UIColor.gray
             label_clicks.text = "0 clicks"
             label_timer.textColor = UIColor.blue
+            currLevel = levelStart
             gameRunning = true
             startTimer()
         }
